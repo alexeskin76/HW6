@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("\t\t\t***Программа определения весов товаров***\n\n\n");
+        System.out.println("\t\t\t***Программа определения весов товаров***\n");
 
         System.out.println("Введите первый вес: ");
         double first = new Scanner(System.in).nextDouble();
@@ -14,63 +14,44 @@ public class Main {
         double third = new Scanner(System.in).nextDouble();
 
 
-        double greatest = 0;
-        double average = 0;
-        double smallest = 0;
+        double greatest;
+        double average;
+        double smallest;
 
+//todo дописать логику программы ниже.
 
-        if (first > second && first > third)
-            System.out.println("Наибольший вес: " + first);
+        if (first > second && first > third) {
+            greatest = first;
+        } else if (second > first && second > third) {
+            greatest = second;
+        } else {
+            greatest = third;
+        }
+        if ((first > second && first < third || first < second && first > third)){
+            average = first;
+        } else if ((second < first && second > third ||second > first && second < third )) {
+            average = second;
+        } else {
+            average = third;
+        }
 
-        if (second > first && second > third)
-            System.out.println("Наибольший вес: " + second);
+        if (first < second && first < third){
+            smallest = first;
+        } else if (second < first && second < third) {
+            smallest = second;
+        }else {
+            smallest = third;
+        }
 
-        if (third > second && third > first)
-            System.out.println("Наибольший вес: " + third);
+        System.out.println("Наибольший вес: " + greatest);
 
-        if (first > second && first < third)
-            System.out.println("Средний вес: " + first);
+        System.out.println("Средний вес: " + average);
 
-        if (second > first && second < third)
-            System.out.println("Средний вес: " + second);
+        System.out.println("Наименьший вес: " + smallest);
 
-        if (third > second && third < first)
-            System.out.println("Средний вес: " + third);
-
-        if (first < second && first > third)
-            System.out.println("Средний вес: " + first);
-
-        if (second < first && second > third)
-            System.out.println("Средний вес: " + second);
-
-        if (third < second && third > first)
-            System.out.println("Средний вес: " + third);
-
-        if (first < second && first < third)
-            System.out.println("Наименьший вес: " + first);
-
-        if (second < first && second < third)
-            System.out.println("Наименьший вес: " + second);
-
-        if (third < second && third < first)
-            System.out.println("Наименьший вес: " + third);
-
-
-    }
-
-        //todo дописать логику программы ниже.
+        }
+        }
 
 
 
-
-
-
-
-        //todo
-
-
-//        System.out.println("Наибольший вес: " + 10);
-//        System.out.println("Средний вес: " + 9);
-//        System.out.println("Наименьший вес: " + 1);
-    }
 
