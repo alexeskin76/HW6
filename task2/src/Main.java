@@ -13,9 +13,51 @@ public class Main {
         System.out.println("Введите третий вес: ");
         double third = new Scanner(System.in).nextDouble();
 
+
         double greatest = 0;
         double average = 0;
         double smallest = 0;
+
+
+        if (first > second && first > third)
+            System.out.println("Наибольший вес: " + first);
+
+        if (second > first && second > third)
+            System.out.println("Наибольший вес: " + second);
+
+        if (third > second && third > first)
+            System.out.println("Наибольший вес: " + third);
+
+        if (first > second && first < third)
+            System.out.println("Средний вес: " + first);
+
+        if (second > first && second < third)
+            System.out.println("Средний вес: " + second);
+
+        if (third > second && third < first)
+            System.out.println("Средний вес: " + third);
+
+        if (first < second && first > third)
+            System.out.println("Средний вес: " + first);
+
+        if (second < first && second > third)
+            System.out.println("Средний вес: " + second);
+
+        if (third < second && third > first)
+            System.out.println("Средний вес: " + third);
+
+        if (first < second && first < third)
+            System.out.println("Наименьший вес: " + first);
+
+        if (second < first && second < third)
+            System.out.println("Наименьший вес: " + second);
+
+        if (third < second && third < first)
+            System.out.println("Наименьший вес: " + third);
+
+
+    }
+
         //todo дописать логику программы ниже.
 
 
@@ -27,8 +69,8 @@ public class Main {
         //todo
 
 
-        System.out.println("Наибольший вес: " + 10);
-        System.out.println("Средний вес: " + 9);
-        System.out.println("Наименьший вес: " + 1);
+//        System.out.println("Наибольший вес: " + 10);
+//        System.out.println("Средний вес: " + 9);
+//        System.out.println("Наименьший вес: " + 1);
     }
-}
+
